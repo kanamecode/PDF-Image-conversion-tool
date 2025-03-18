@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 200px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    /* クリック可能に */
+}
+
+.download-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}
+
+/* モーダルのスタイル */
+.modal {
+    display: none;
+    /* 初期状態は非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    h1 {
+        color: #f4f4f4;
+    }
+
+    input[type="file"] {
+        border: 2px solid #ccc;
+        background-color: #444;
+        color: white;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .download-button {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .download-button:hover {
+        background-color: #45a049;
+    }
+
+    #preview {
+        background-color: #333;
+        border-radius: 10px;
+    }
+
+    .image-container {
+        background-color: #555;
+        border-radius: 10px;
+    }
+
+    img {
+        border: 1px solid #666;
+    }
+
+    .modal {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .close {
+        color: white;
+    }
+}
+
+/* モバイル対応のメディアクエリ */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="file"] {
+        width: 80%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .image-container {
+        margin: 10px;
+        width: 90%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
